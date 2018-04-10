@@ -26,13 +26,19 @@ class ViewController: UIViewController {
         addButton = UIButton(frame: CGRect.init(x: 0, y: 0, width: 120, height: 40))
         addButton.layer.cornerRadius = 8
         addButton.layer.borderColor = UIColor.gray.cgColor
-        addButton.layer.borderWidth = 2
+        addButton.layer.borderWidth = 1
         addButton.clipsToBounds = true
         addButton.setTitle("Add Card", for: .normal)
-        addButton.setTitleColor(.gray, for: .normal)
+        addButton.setTitleColor(UIColor.init(hexCode: "#14BB5F"), for: .normal)
         addButton.center = CGPoint(x: self.view.frame.width/2, y: (self.view.frame.height/2) + 50)
         addButton.alpha = 0
+        addButton.addTarget(self, action: #selector(self.segueToaddCard(sender:)), for: .touchUpInside)
         self.view.addSubview(addButton)
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +56,10 @@ class ViewController: UIViewController {
         }) { (_) in
             
         }
+    }
+    
+    @objc func segueToaddCard(sender: Any) {
+        self.show(AddCardViewController(), sender: self)
     }
 
     override func didReceiveMemoryWarning() {
