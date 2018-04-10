@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		424562E5207C5B72009D6E76 /* CardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424562E4207C5B72009D6E76 /* CardTextField.swift */; };
+		424562E7207D7388009D6E76 /* PUICardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424562E6207D7388009D6E76 /* PUICardView.swift */; };
 		425A8E8F20630F5400FBECAF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E8E20630F5400FBECAF /* Utility.swift */; };
 		425A8E912063161C00FBECAF /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E902063161C00FBECAF /* CardsViewController.swift */; };
 		425A8E932063FC8500FBECAF /* CardsCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E922063FC8500FBECAF /* CardsCarouselView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		424562E4207C5B72009D6E76 /* CardTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTextField.swift; sourceTree = "<group>"; };
+		424562E6207D7388009D6E76 /* PUICardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUICardView.swift; sourceTree = "<group>"; };
 		425A8E8E20630F5400FBECAF /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		425A8E902063161C00FBECAF /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		425A8E922063FC8500FBECAF /* CardsCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCarouselView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		4276B2BA205F07A8000DAD49 /* Paisa Example */ = {
 			isa = PBXGroup;
 			children = (
+				424562E6207D7388009D6E76 /* PUICardView.swift */,
 				4276B2BB205F07A8000DAD49 /* AppDelegate.swift */,
 				4276B2BD205F07A8000DAD49 /* ViewController.swift */,
 				425A8E902063161C00FBECAF /* CardsViewController.swift */,
@@ -158,6 +161,7 @@
 				4276B2BC205F07A8000DAD49 /* AppDelegate.swift in Sources */,
 				424562E5207C5B72009D6E76 /* CardTextField.swift in Sources */,
 				429204C6206307D700E9F124 /* AddCardViewController.swift in Sources */,
+				424562E7207D7388009D6E76 /* PUICardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
