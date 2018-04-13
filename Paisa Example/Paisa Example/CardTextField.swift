@@ -19,6 +19,8 @@ enum CardTextFieldType {
 }
 
 class CardTextField: UITextField {
+    
+    var type: CardTextFieldType = .card
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -79,6 +81,7 @@ class PUITextField: UIView, UITextFieldDelegate {
         
         textField = CardTextField(frame: CGRect.init(x: 0, y: titleLabel.frame.height, width: self.frame.width, height: self.frame.height - self.titleLabel.frame.height))
         textField.delegate = self
+        textField.type = type
         textField.addTarget(self, action: #selector(self.textFielDidChange(sender:)), for: .editingChanged)
         textField.keyboardType = .numberPad
         self.addSubview(textField)
@@ -115,7 +118,25 @@ class PUITextField: UIView, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //Field validation goes here
+        var maxFieldCount = 0
+        let textCount =  textField.text?.count ?? 0
+        let fieldType = (textField as? CardTextField)?.type
+        if fieldType == .card {
+            maxFieldCount = 19
+            if (textCount == 4 || textCount == 9 || textCount == 14) && string != "" {
+                textField.text! += " "
+            }
+        } else if fieldType == .expiry {
+            maxFieldCount = 5
+        } else if fieldType == .cvv {
+            maxFieldCount = 4
+        } else if fieldType == .zip {
+            maxFieldCount = 5
+        }
+        
+        if string != "" && textCount == maxFieldCount {
+            return false
+        }
         
         return true
     }

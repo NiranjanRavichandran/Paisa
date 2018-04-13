@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		424562E5207C5B72009D6E76 /* CardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424562E4207C5B72009D6E76 /* CardTextField.swift */; };
 		424562E7207D7388009D6E76 /* PUICardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424562E6207D7388009D6E76 /* PUICardView.swift */; };
+		424562ED20804722009D6E76 /* CardUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424562EC20804722009D6E76 /* CardUtility.swift */; };
 		425A8E8F20630F5400FBECAF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E8E20630F5400FBECAF /* Utility.swift */; };
 		425A8E912063161C00FBECAF /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E902063161C00FBECAF /* CardsViewController.swift */; };
 		425A8E932063FC8500FBECAF /* CardsCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8E922063FC8500FBECAF /* CardsCarouselView.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		424562E4207C5B72009D6E76 /* CardTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTextField.swift; sourceTree = "<group>"; };
 		424562E6207D7388009D6E76 /* PUICardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUICardView.swift; sourceTree = "<group>"; };
+		424562EC20804722009D6E76 /* CardUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtility.swift; sourceTree = "<group>"; };
 		425A8E8E20630F5400FBECAF /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		425A8E902063161C00FBECAF /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		425A8E922063FC8500FBECAF /* CardsCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCarouselView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		4276B2BA205F07A8000DAD49 /* Paisa Example */ = {
 			isa = PBXGroup;
 			children = (
+				424562EC20804722009D6E76 /* CardUtility.swift */,
 				424562E6207D7388009D6E76 /* PUICardView.swift */,
 				4276B2BB205F07A8000DAD49 /* AppDelegate.swift */,
 				4276B2BD205F07A8000DAD49 /* ViewController.swift */,
@@ -109,7 +112,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Aviato;
 				TargetAttributes = {
 					4276B2B7205F07A8000DAD49 = {
@@ -159,6 +162,7 @@
 				4276B2BE205F07A8000DAD49 /* ViewController.swift in Sources */,
 				425A8E912063161C00FBECAF /* CardsViewController.swift in Sources */,
 				4276B2BC205F07A8000DAD49 /* AppDelegate.swift in Sources */,
+				424562ED20804722009D6E76 /* CardUtility.swift in Sources */,
 				424562E5207C5B72009D6E76 /* CardTextField.swift in Sources */,
 				429204C6206307D700E9F124 /* AddCardViewController.swift in Sources */,
 				424562E7207D7388009D6E76 /* PUICardView.swift in Sources */,
@@ -201,6 +205,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -208,6 +213,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -258,6 +264,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +272,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

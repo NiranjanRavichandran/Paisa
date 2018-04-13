@@ -35,7 +35,7 @@ class AddCardViewController: UIViewController {
         UIView.animate(withDuration: 0.75, animations: {
             self.cardTemplate.frame.origin.y = self.cardNumberField.frame.origin.y - self.cardTemplate.frame.height - 25
         }) { (_) in
-            self.cardNumberField.becomeFirstResponder()
+            _ = self.cardNumberField.becomeFirstResponder()
         }
     }
 
