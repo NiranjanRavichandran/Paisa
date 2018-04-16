@@ -18,6 +18,10 @@ enum CardTextFieldType {
     case zip
 }
 
+protocol PUITextFieldDelegate {
+    func didUpdateBrandLogo(image: UIImage)
+}
+
 class CardTextField: UITextField {
     
     var type: CardTextFieldType = .card
@@ -67,6 +71,7 @@ class PUITextField: UIView, UITextFieldDelegate {
     
     private var titleLabel: UILabel!
     private var textField: CardTextField!
+    var delegate: PUITextFieldDelegate?
     
     
     convenience init(frame: CGRect, type: CardTextFieldType, title: String) {
@@ -114,7 +119,10 @@ class PUITextField: UIView, UITextFieldDelegate {
     }
     
     @objc private func textFielDidChange(sender: UITextField) {
-        
+        if self.textField.type == .card {
+            let brandImage = self.getBrandImage()
+            self.delegate?.didUpdateBrandLogo(image: brandImage)
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -143,6 +151,16 @@ class PUITextField: UIView, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
+    }
+    
+    func getBrandImage() -> UIImage {
+        
+        return UIImage()
+    }
+    
+    func getBrandImage(for type: CardBrandType) -> UIImage {
+        
+        return UIImage()
     }
     
     
