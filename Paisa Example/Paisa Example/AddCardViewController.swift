@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController {
+class AddCardViewController: UIViewController, PUITextFieldDelegate {
     
     var cardNumberField: PUITextField!
     var cardTemplate: PUICardView!
@@ -20,6 +20,7 @@ class AddCardViewController: UIViewController {
         
         cardNumberField = PUITextField.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: 60), type: .card, title: "What is your credit card number?")
         cardNumberField.center.y = self.view.frame.height/2
+        cardNumberField.delegate = self
         self.view.addSubview(cardNumberField)
         
         cardTemplate = PUICardView(frame: CGRect.init(x: 0, y: -200, width: 300, height: 200))
@@ -47,5 +48,12 @@ class AddCardViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    //MARK: - PUITextfieldDelegate
+    
+    func didUpdateBrandLogo(image: UIImage) {
+        self.cardTemplate.setBrandLogo(with: image)
+    }
+    
 
 }

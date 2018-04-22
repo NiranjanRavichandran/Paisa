@@ -71,6 +71,7 @@ class PUITextField: UIView, UITextFieldDelegate {
     
     private var titleLabel: UILabel!
     private var textField: CardTextField!
+    private var currentBrandType: CardBrandType = .none
     var delegate: PUITextFieldDelegate?
     
     
@@ -120,8 +121,12 @@ class PUITextField: UIView, UITextFieldDelegate {
     
     @objc private func textFielDidChange(sender: UITextField) {
         if self.textField.type == .card {
-            let brandImage = self.getBrandImage()
-            self.delegate?.didUpdateBrandLogo(image: brandImage)
+            guard let text = textField.text else {
+                return
+            }
+            if (text.count > 3 && text.count <= 7) || text.count == 0 {
+                self.getBrandImage(with: text)
+            }
         }
     }
     
@@ -153,9 +158,12 @@ class PUITextField: UIView, UITextFieldDelegate {
         
     }
     
-    func getBrandImage() -> UIImage {
-        
-        return UIImage()
+    func getBrandImage(with numbers: String) {
+        let result = CardUtility.getCardBrandImage(numbers)
+        if currentBrandType != result.brandType {
+            self.currentBrandType = result.brandType
+            self.delegate?.didUpdateBrandLogo(image: result.image ?? UIImage())
+        }
     }
     
     func getBrandImage(for type: CardBrandType) -> UIImage {
