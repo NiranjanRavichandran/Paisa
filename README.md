@@ -1,2 +1,2 @@
 # Paisa
-A payment card number validator library in swift.
+Payment card number validator library in swift.
