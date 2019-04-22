@@ -15,6 +15,7 @@
 		42F54272226BBFBD0057B389 /* PaisaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F54271226BBFBD0057B389 /* PaisaTests.swift */; };
 		42F5427D226BBFF10057B389 /* NJCardTypeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5427C226BBFF10057B389 /* NJCardTypeChecker.swift */; };
 		42F5427F226C0B790057B389 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5427E226C0B790057B389 /* CardType.swift */; };
+		42F54281226CBF6C0057B389 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F54280226CBF6C0057B389 /* String+Regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		42F54273226BBFBD0057B389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42F5427C226BBFF10057B389 /* NJCardTypeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJCardTypeChecker.swift; sourceTree = "<group>"; };
 		42F5427E226C0B790057B389 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		42F54280226CBF6C0057B389 /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				42F5425E226BBFBB0057B389 /* ViewController.swift */,
 				42F5427C226BBFF10057B389 /* NJCardTypeChecker.swift */,
 				42F5427E226C0B790057B389 /* CardType.swift */,
+				42F54280226CBF6C0057B389 /* String+Regex.swift */,
 				42F54260226BBFBB0057B389 /* Main.storyboard */,
 				42F54263226BBFBD0057B389 /* Assets.xcassets */,
 				42F54265226BBFBD0057B389 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F5425F226BBFBB0057B389 /* ViewController.swift in Sources */,
+				42F54281226CBF6C0057B389 /* String+Regex.swift in Sources */,
 				42F5427F226C0B790057B389 /* CardType.swift in Sources */,
 				42F5427D226BBFF10057B389 /* NJCardTypeChecker.swift in Sources */,
 				42F5425D226BBFBB0057B389 /* AppDelegate.swift in Sources */,

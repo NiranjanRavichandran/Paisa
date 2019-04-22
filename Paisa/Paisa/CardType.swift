@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CardType {
+public enum CardType {
     /// American Express
     case amex
     
@@ -36,14 +36,11 @@ enum CardType {
     /// VISA Electron
     case electron
     
-    /// Diners ClubCare Blance
+    /// Diners ClubCarte Blanche
     case dcb
     
     /// Diners Club International
     case dci
-    
-    /// Diners Club US & Canada
-    case dcuc
     
     /// Discover
     case discover
@@ -58,5 +55,5 @@ enum CardType {
     case lankaPay
     
     /// No type
-    case none
+    case notRecognized
 }
