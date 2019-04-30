@@ -14,26 +14,16 @@ final public class NJCardChecker {
     public class func checkCardType(numbers: String) -> CardType {
         // Let's clean up the string before we type check
         let filtered = cleanUp(numbers)
-        
         return getType(for: filtered)
     }
     
     private class func getType(for card: String) -> CardType {
         fatalError("Incomplete implementation")
-        
-        if isVisa(card) {
-            return .visa
-        }
-        
-        if isAmex(card) {
-            return .master
-        }
-        
-        return .notRecognized
     }
     
     //MARK: - Luhn's Check
     
+    // from: https://gist.github.com/jonelf/bccf58698adc12e53fd6
     /// Validates given card number based on Luhn's Algorithm
     public func isValidCarNumber(_ number: String) -> Bool {
         // We need at least 9 numbers to validate the card
